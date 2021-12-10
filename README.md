@@ -74,23 +74,23 @@ In this project, you will build the reducer, actions and basic redux connects to
 ### Complete App.js
   Connect component to the fetchSmurfs action.
   
-  * [ ] Connect the fetchSmurfs actions to the App component.
-  * [ ] Call the fetchSmurfs action when the component first loads.
+  * [X] Connect the fetchSmurfs actions to the App component.
+  * [X] Call the fetchSmurfs action when the component first loads.
 
 ### Complete components/SmurfList.js
   Connect this component to your smurfs and loading screen state slices.
   
-  * [ ] Connect the smurfs and loading state values to the SmurfList component.
-  * [ ] Replace the single Smurf component instance with a map return a Smurf component for each entry in the smurfs list.
-  * [ ] Replace the static isLoading variable with the state loading variable.
+  * [X] Connect the smurfs and loading state values to the SmurfList component.
+  * [X] Replace the single Smurf component instance with a map return a Smurf component for each entry in the smurfs list.
+  * [X] Replace the static isLoading variable with the state loading variable.
 
 ### Complete components/AddForm.js
   Connect this component to the error state slice, setError and addSmurf actions. Complete the form handling code.
 
-  * [ ] Connect your error state slice, setError and addSmurf actions to the AddForm component.
-  * [ ] Replace all instances of the errorMessage static variable with your error message state slice. 
-  * [ ] Within the handleSubmit function, replace the static assignment to errorMessage with a call to the setError action. Test that an error is displayed when validation code fails.
-  * [ ] Within the handleSubmit function, call your addSmurf action with the smurf name, position, nickname and summery passed as arguments. Test that a smurf is correctly added to when the form is submitted.
+  * [X] Connect your error state slice, setError and addSmurf actions to the AddForm component.
+  * [X] Replace all instances of the errorMessage static variable with your error message state slice. 
+  * [X] Within the handleSubmit function, replace the static assignment to errorMessage with a call to the setError action. Test that an error is displayed when validation code fails.
+  * [X] Within the handleSubmit function, call your addSmurf action with the smurf name, position, nickname and summery passed as arguments. Test that a smurf is correctly added to when the form is submitted.
 
 ## Important Notes:
 
@@ -102,7 +102,7 @@ In this project, you will build the reducer, actions and basic redux connects to
 * Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work.
 
 ## Submission format
-* [ ] Submit via Codegrade by committing and pushing any new changes to **your main branch.**
+* [ ] Submit via Codegrade by committing and pushing any new changes to **main.**
 * [ ] Check Codegrade before the deadline to compare its results against your local tests.
 * [ ] Check Codegrade on the days following the Sprint Challenge for reviewer feedback. For more information on how to access and read your feedback, check [here](https://www.notion.so/lambdaschool/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a)
 * [ ] New commits will be evaluated by Codegrade if pushed before the sprint challenge deadline.
@@ -113,8 +113,32 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What problem does the context API help solve?
 
+It helps with prop-drilling. "In a typical React application, data is passed top-down (parent to child) via props, but this can be cumbersome for certain types of props (e.g. locale preference, UI theme) that are required by many components within an application" (lambdaschool.instructure.com).
+
 2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+Actions
+An action is a piece of information that has an action type and other data.
+"Actions: Actions are a plain JavaScript object that contains information. Actions are the only source of information for the store. Actions have a type field that tells what kind of action to perform and all other fields contain information or data" (geeksforgeeks.org).
+
+Reducers
+They are "pure" functions (no side effects). They only return new objects.
+"As we already know, actions only tell what to do, but they don’t tell how to do, so reducers are the pure functions that take the current state and action and return the new state and tell the store how to do" (geeksforgeeks.org).
+
+Store
+"The store is the object which holds the state of the application.
+Functions associated with Store:
+
+
+createStore() – To create a store
+dispatch(action) -To change the state
+getState() – for getting current state of store" (geeksforgeeks.org).
 
 3. What does `redux-thunk` allow us to do? How does it change our `action-creators`?
 
+redux-thunk allows us to fetch data from an API, run asynchronous operations, dispatch actions to the reducer, etc.
+
+"Redux Thunk is a middleware that lets you call action creators that return a function instead of an action object. That function receives the store’s dispatch method, which is then used to dispatch regular synchronous actions inside the function’s body once the asynchronous operations have been completed" (digitalocean.com).
+
 4. What is your favorite state management system you've learned and this sprint? Please explain why!
+I love creating actions and reducers because I've done it so many times, and I feel like I'm wonderful at it.
