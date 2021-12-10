@@ -40,10 +40,6 @@ In this project, you will build the reducer, actions and basic redux connects to
   }
 ];
 ```
-
-## Example Finished Project
-![Example Finished Project](./project_example.gif)
-
 ## Project Requirements
 
 ### Complete reducers/index.js
