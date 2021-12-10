@@ -40,6 +40,8 @@ In this project, you will build the reducer, actions and basic redux connects to
   }
 ];
 ```
+## TEST FOR README
+
 ## Project Requirements
 
 ### Complete reducers/index.js
