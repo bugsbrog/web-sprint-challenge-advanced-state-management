@@ -9,12 +9,10 @@ import Header from './components/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 
-class App extends Component {
-    componentDidMount(){
-        this.props.dispatch(fetchSmurfs());
-    }
+const App = (props) => {
+    const { fetchSmurfs } = props;
+    fetchSmurfs();
 
-    render() {
         return (
             <div className="App">
                 <Header />
@@ -25,7 +23,6 @@ class App extends Component {
                  </main>
                 </div>
         );
-    }
 }
 
-export default connect(null)(App);
+export default connect(null, { fetchSmurfs })(App);
